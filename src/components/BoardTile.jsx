@@ -49,7 +49,7 @@ export class BoardTile extends React.Component {
 
 BoardTile.propTypes = {
     onClicked: PropTypes.func.isRequired,
-    victory: PropTypes.bool.isRequired,
-    value:  PropTypes.string.isRequired,
+    victory: PropTypes.bool,
+    value:  PropTypes.string,
     editable: PropTypes.bool.isRequired
 };
