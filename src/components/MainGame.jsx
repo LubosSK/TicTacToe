@@ -76,7 +76,6 @@ class MainGame extends React.Component {
         return (
             <div className="container">
 
-
                 <div className='row'>
                     <div className='offset-sm-3 col-sm-6 text-center'>
                         <ul className="list-group list-group-flush">
@@ -110,9 +109,6 @@ class MainGame extends React.Component {
                             Start
                         </button>
                     </div>}
-
-
-
             </div >
         );
     }

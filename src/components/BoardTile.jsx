@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 export class BoardTile extends React.Component {
     timeOut;
@@ -45,3 +46,10 @@ export class BoardTile extends React.Component {
             </div>);
     }
 }
+
+BoardTile.propTypes = {
+    onClicked: PropTypes.func.isRequired,
+    victory: PropTypes.bool.isRequired,
+    value:  PropTypes.string.isRequired,
+    editable: PropTypes.bool.isRequired
+};

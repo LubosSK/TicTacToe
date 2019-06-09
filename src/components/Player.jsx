@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Player extends React.Component {
 
@@ -54,7 +55,7 @@ export default class Player extends React.Component {
                                 disabled={!nameValue.length}>
                                 Save
                             </button>
-                            <button className="btn btn-outline-dark btn-sm" 
+                            <button className="btn btn-outline-dark btn-sm"
                                 onClick={this.cancelEditing}>
                                 Cancel
                             </button>
@@ -70,6 +71,12 @@ export default class Player extends React.Component {
                 <strong>({player.mark})</strong>{player.name}
                 <button className="btn btn-outline-dark btn-sm" onClick={this.startEditing}>Edit</button>
             </div>
-        );[
+        );
     }
 }
+
+Player.propTypes = {
+    defaultEdit: PropTypes.bool.isRequired,
+    player: PropTypes.object.isRequired,
+    onNameChanged: PropTypes.func.isRequired
+};
